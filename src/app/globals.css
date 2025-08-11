@@ -2,32 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Color tokens as RGB so Tailwind can handle alpha transparently */
-:root {
-  /* base surfaces & text */
-  --bg: 250 252 255; /* very light blue/pearl */
-  --text: 17 24 39; /* near-neutral-900 */
-
-  /* brand */
-  --navy: 28 46 74; /* #1c2e4a */
-  --blue-50: 205 230 245; /* #cde6f5 */
-  --blue-100: 177 212 224; /* #b1d4e0 */
-  --pearl: 253 253 253; /* #fdfdfd */
-  --gold: 212 175 55; /* #d4af37 */
-
-  /* shadows */
-  --ring: 212 175 55; /* gold for focus ring */
+:where(a, button, [tabindex]:not([tabindex='-1'])):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
-/* Dark theme overrides */
+:root {
+  --navy: #1c2e4a;
+  --blue-50: #cde6f5;
+  --blue-100: #b1d4e0;
+  --pearl: #fdfdfd;
+  --gold: #d4af37;
+}
+
 .dark {
-  --bg: 4 7 14; /* near-black navy */
-  --text: 233 233 235; /* soft pearl */
-  --navy: 18 30 52; /* deeper navy */
-  --blue-50: 46 74 110; /* muted blue */
-  --blue-100: 69 104 144; /* muted blue */
-  --pearl: 22 24 28; /* deep pearl */
-  --gold: 212 175 55; /* keep gold luminous */
+  --navy: #0b1424;
+  --blue-50: #0e2030;
+  --blue-100: #13324d;
+  --pearl: #0a0f18;
+  --gold: #d4af37; /* keep the gold pop */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[var(--pearl)] text-[var(--navy)];
+}
+
+.bg-pearl {
+  background-color: var(--pearl);
+}
+.text-navy {
+  color: var(--navy);
+}
+.text-gold {
+  color: var(--gold);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.font-display {
+  font-family: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
 /* Base layer tweaks */
@@ -47,22 +66,31 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Components layer: primitives we’ll reuse */
 @layer components {
   .container-page {
     @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
   }
   .card {
-    @apply rounded-2xl border border-navy/10 bg-pearl/80 shadow-soft backdrop-blur dark:border-pearl/10 dark:bg-pearl/5;
+    @apply border-navy/10 bg-pearl/80 shadow-soft dark:border-pearl/10 dark:bg-pearl/5 rounded-2xl border backdrop-blur;
   }
   .btn {
-    @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm transition-all duration-200 ease-elegant;
+    @apply ease-elegant inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm transition-all duration-200;
   }
   .btn-primary {
-    @apply bg-navy text-pearl hover:-translate-y-0.5 hover:shadow-glow;
+    @apply bg-navy text-pearl hover:shadow-glow hover:-translate-y-0.5;
   }
   .btn-ghost {
-    @apply border border-gold/60 text-navy hover:bg-gold/10 dark:text-pearl;
+    @apply border-gold/60 text-navy hover:bg-gold/10 dark:text-pearl border;
   }
   .focus-ring {
     box-shadow: 0 0 0 3px rgb(var(--gold) / 0.35);

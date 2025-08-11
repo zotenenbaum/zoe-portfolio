@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "canned-comment-enhancements",
+    "title": "Canned Comment Enhancements",
+    "summary": "Templating, data model, and UI polish for ops workflow.",
+    "tags": ["React", "Django", "Postgres"],
+    "status": "coming-soon",
+    "url": "#",
+    "image": "/images/projects/canned-comments.png"
+  },
+  {
+    "slug": "nlp-risk-mitigator",
+    "title": "NLP Risk Mitigator",
+    "summary": "Scores news streams against tickers to flag portfolio risk.",
+    "tags": ["Python", "spaCy", "ETL"],
+    "status": "coming-soon",
+    "url": "#"
+  },
+  {
+    "slug": "ic-playground",
+    "title": "IC Playground",
+    "summary": "Visual, interactive notes for digital design concepts.",
+    "tags": ["Verilog", "Visualization"],
+    "status": "coming-soon",
+    "url": "#"
+  }
+]

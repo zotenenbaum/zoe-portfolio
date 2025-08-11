@@ -1,21 +1,16 @@
 'use client';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-  const isDark = theme === 'dark';
+  const next = theme === 'dark' ? 'light' : 'dark';
   return (
     <button
-      className="btn btn-ghost focus-visible:focus-ring focus-visible:outline-none"
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      onClick={() => setTheme(next)}
+      className="rounded-xl border border-blue-100 px-3 py-1.5 hover:bg-blue-50/50 dark:border-blue-800 dark:hover:bg-blue-900/40"
       aria-label="Toggle dark mode"
-      title="Toggle dark mode"
     >
-      {isDark ? 'Light' : 'Dark'}
+      {theme === 'dark' ? 'Light' : 'Dark'}
     </button>
   );
 }
