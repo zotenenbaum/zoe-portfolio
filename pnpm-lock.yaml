@@ -110,7 +110,6 @@ packages:
       {
         integrity: sha512-PJR+bOmMOPH8AtcTGAyYNiuJ3/Fcoj2XN/gBEWzDIKh254XO+mM9XoXHk5GNEhodxeMznbg7BlRojVbKN+gC6g==,
       }
-
   '@eslint-community/eslint-utils@4.7.0':
     resolution:
       {
