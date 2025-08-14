@@ -34,7 +34,7 @@ function Tile({ label, src }: { label: string; src?: string }) {
 
 export default function Gallery() {
   return (
-    <Section id="gallery" title="Gallery" eyebrow="Places I’ve loved">
+    <Section id="gallery" title="Gallery" eyebrow="Places I love">
       <div className="gallery">
         {items.map((i) => (
           <Tile key={i.label} {...i} />
