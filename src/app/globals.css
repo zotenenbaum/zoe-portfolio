@@ -30,15 +30,6 @@ body {
     sans-serif;
 }
 
-html.dark {
-  --navy: 63, 57, 49; 
-  --blue-50: 109, 121, 115; 
-  --blue-100: 100, 170, 170; 
-  --pearl: 229, 218, 206; 
-  --gold: 200, 180, 50;
-  background: rgb(var(--pearl));
-  color: rgb(var(--blue-100));
-}
 
 /* Accessibility: focus + reduced motion */
 :where(a, button, [tabindex]:not([tabindex='-1'])):focus-visible {
@@ -97,10 +88,6 @@ html.dark {
   transition:
     box-shadow 0.25s,
     transform 0.25s;
-}
-html.dark .card {
-  background: rgba(var(--navy), 0.7);
-  border-color: rgba(var(--blue-100), 0.15);
 }
 .card:hover {
   box-shadow: var(--shadow-card-hover);
@@ -163,10 +150,6 @@ html.dark .card {
   background: rgba(var(--pearl), 0.85);
   border-bottom: 1px solid rgba(var(--blue-100), 0.6);
   z-index: 50;
-}
-html.dark .navbar {
-  background: rgba(var(--navy), 0.7);
-  border-color: rgba(var(--blue-100), 0.15);
 }
 .navbar__inner {
   height: 100%;
@@ -246,13 +229,6 @@ html.dark .navbar {
     rgb(var(--pearl))
   );
 }
-html.dark .hero {
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--navy)),
-    #0b1424
-  );
-}
 
 .hero__title {
   font-family: "Playfair Display", Georgia, serif; /* or your chosen display font */
@@ -262,14 +238,12 @@ html.dark .hero {
   margin: 0;
   padding-top: 2rem;
 }
-html.dark .hero__title { color: #f5f7fb; }
 
 .hero__lead {
   margin-top: 1.25rem; /* mt-5 */
   max-width: 42rem;    /* ~max-w-2xl */
   color: rgb(var(--navy));
 }
-html.dark .hero__lead { color: rgba(210, 225, 240, 0.8); }
 
 .hero__specks {
   pointer-events: none;
@@ -280,6 +254,7 @@ html.dark .hero__lead { color: rgba(210, 225, 240, 0.8); }
   background-size: 18px 18px;
   opacity: 0.25; /* animated in via framer-motion */
 }
+
 /* Quotes grid */
 .quotes {
   display: grid;
@@ -300,11 +275,6 @@ html.dark .hero__lead { color: rgba(210, 225, 240, 0.8); }
   transition: box-shadow .25s, transform .25s, background-color .25s;
   box-shadow: 0 6px 18px rgba(28,46,74,0.08);
 }
-html.dark .quote {
-  background: rgba(var(--navy), 0.55);
-  border-color: rgba(var(--blue-100), 0.18);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-}
 
 /* Gold quote mark */
 .quote::before {
@@ -324,14 +294,12 @@ html.dark .quote {
   line-height: 1.6;
   color: rgb(var(--navy));
 }
-html.dark .quote__text { color: rgba(240,245,250,0.95); }
 
 .quote__author {
   margin-top: 0.6rem;
   font-size: 0.9rem;
   color: rgba(var(--navy), 0.7);
 }
-html.dark .quote__author { color: rgba(220,230,240,0.7); }
 
 /* Subtle hover “lift” */
 .quote:hover {
