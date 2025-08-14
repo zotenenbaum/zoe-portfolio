@@ -6,7 +6,7 @@ export default function About() {
     <Section id="about" title="About">
       <div className="about__body">
         <p>
-          Hi! I'm <strong>Zoe Tenenbaum</strong> — an EECS senior at UC Berkeley. I'm passionate about fun and clean software development and have experience across electrical systems and full-stack development.
+          Hi! I am <strong>Zoe Tenenbaum</strong> — an EECS senior at UC Berkeley. I am passionate about fun and clean software development and have experience across electrical systems and full-stack development.
         </p>
         <p>
           Recently: shipped internal UX improvements, prototyped NLP-driven analysis, and am activly taking classes on algorithms and systems.
