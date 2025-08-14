@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import ThemeToggle from './ThemeToggle'; 
 
 const links = [
   { href: '#intro', label: 'Intro' },
