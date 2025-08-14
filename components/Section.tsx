@@ -1,4 +1,3 @@
-import GoldUnderline from './GoldUnderline';
 export default function Section({
   id,
   title,
@@ -11,17 +10,16 @@ export default function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mb-8">
-        {eyebrow && (
-          <div className="text-xs uppercase tracking-widest text-blue-300">{eyebrow}</div>
-        )}
-        <h2 className="font-display text-3xl font-semibold sm:text-4xl">
-          {title}
-          <GoldUnderline />
-        </h2>
+    <section id={id} className="section">
+      <div className="container">
+        <div className="section__head">
+          {eyebrow && <div className="eyebrow">{eyebrow}</div>}
+          <h2 className="h2">
+            {title} <span className="underline-gold" />
+          </h2>
+        </div>
+        {children}
       </div>
-      {children}
     </section>
   );
 }

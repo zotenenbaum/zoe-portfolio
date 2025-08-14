@@ -10,16 +10,16 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 
 export const metadata: Metadata = {
   title: 'Zoe Tenenbaum',
-  description: 'Portfolio of Zoe Tenenbaum — sleek, animated, and a little golden.',
+  description: 'Portfolio of Zoe Tenenbaum',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} bg-pearl text-navy antialiased`}>
+      <body className="bg-pearl text-navy antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Nav />
-          <main className="pt-16">{children}</main>
+          <main className="pt-16">{children}</main> 
           <Footer />
         </ThemeProvider>
       </body>
