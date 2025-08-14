@@ -3,9 +3,9 @@ import Section from '../../components/Section';
 import Image from 'next/image';
 
 const items = [
-  { label: 'Hawaii_Chicken', src: '/images/chicken.jpg' },
+  { label: 'Hawaii_Chicken', src: '/images/chicken.JPG' },
   { label: 'Lake Como', src: '/images/como.jpg' },
-  { label: 'Hawaii', src: '/images/hawaii.jpg' },
+  { label: 'Hawaii', src: '/images/hawaii.JPG' },
   { label: 'Greece', src: '/images/cats.png' },
   { label: 'Yosemite', src: '/images/yosemite.png' },
   { label: 'Recco', src: '/images/recco.JPG' },
