@@ -72,7 +72,7 @@ export default function Extra() {
           viewport={{ once: true }}
           transition={{ duration: 0.45, delay: 0.05 }}
         >
-          "Be the change that you wish to see in the world."
+          “Be the change that you wish to see in the world.”
           <footer
             style={{
               marginTop: "0.5rem",

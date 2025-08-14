@@ -1,5 +1,4 @@
 import Section from '../../components/Section';
-import RepoGrid from '../../components/RepoGrid';
 
 export default function Projects() {
   return (
